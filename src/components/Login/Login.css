@@ -1,0 +1,12 @@
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin: auto;
+  }
+  
+  div {
+    margin-bottom: 15px;
+  }
+  
