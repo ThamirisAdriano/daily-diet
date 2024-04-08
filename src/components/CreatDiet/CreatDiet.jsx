@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import styles from './CreateDiet.module.css'
+import { Link } from 'react-router-dom';
+
 
 function CreateDiet() {
   const [name, setName] = useState('');
@@ -11,8 +14,7 @@ function CreateDiet() {
     const diet = { name, description, isOnDiet, date };
 
     try {
-      const response = await fetch('http://localhost:3333/meals', { // Substitua com a URL correta do seu backend
-        method: 'POST',
+      const response = await fetch('http://localhost:3333/meals', { 
         headers: {
           'Content-Type': 'application/json',
         },
@@ -23,9 +25,7 @@ function CreateDiet() {
         // Dieta criada com sucesso
         const result = await response.json();
         console.log('Dieta criada:', result);
-        // Redirecionar ou atualizar a UI conforme necessário
       } else {
-        // Tratar erros de resposta
         console.error('Falha ao criar dieta');
       }
     } catch (error) {
@@ -34,8 +34,8 @@ function CreateDiet() {
   };
 
   return (
-    <div>
-      <h2>Criar Dieta</h2>
+    <div className={styles.container}>
+    <h2>Criar Dieta</h2>
       <form onSubmit={handleSubmit}>
         {/* Campos do formulário */}
         <div>
@@ -56,6 +56,7 @@ function CreateDiet() {
         </div>
         <button type="submit">Criar Dieta</button>
       </form>
+      <Link to="/" className={styles.backButton}>Voltar para Início</Link>
     </div>
   );
 }
