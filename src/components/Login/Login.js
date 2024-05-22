@@ -14,7 +14,7 @@ function Login() {
 
   return (
     <div>
-      <h2>Login</h2>
+      <h2>Bem vindo ao Daily Diet - Univesp</h2>
       <form onSubmit={handleSubmit}>
         <div>
           <label>Email:</label>

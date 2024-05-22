@@ -1,0 +1,31 @@
+/* CalculeImc.module.css */
+.container {
+  text-align: center;
+  margin: 50px;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+}
+
+label {
+  margin-right: 10px;
+}
+
+input {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.calculateButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+  

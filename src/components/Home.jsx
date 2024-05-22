@@ -15,6 +15,9 @@ const Home = () => {
         <Link to="/create-diet" className={styles.link}>
           Adicionar dieta
         </Link>
+        <Link to="/calcule-imc" className={styles.link}>
+          Calcular IMC
+        </Link>
       </nav>
     </div>
   );
